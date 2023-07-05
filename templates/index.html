@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tweet Sentiment Analysis</title>
+  <link rel="stylesheet" type="text/css" href="static/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Tweet Sentiment Analysis</h1>
+    <form id="sentimentForm" action="/predict" method="post">
+      <label for="tweetInput">Enter a tweet:</label>
+      <input type="text" id="tweetInput" name="tweetInput" required>
+      <button type="submit">Submit</button>
+    </form>
+    <div id="outputBox">
+      <h2 id="sentimentLabel">{{pred}}</h2>
+    </div>
+  </div>
+
+
+</body>
+</html>

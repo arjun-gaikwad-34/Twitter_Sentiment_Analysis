@@ -1,0 +1,53 @@
+.container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+#outputBox {
+  background-color: #f2f2f2;
+  padding: 20px;
+  text-align: center;
+}
+
+#sentimentLabel {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Colors for sentiment types */
+.positive {
+  color: green;
+}
+
+.neutral {
+  color: blue;
+}
+
+.negative {
+  color: red;
+}
