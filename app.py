@@ -6,12 +6,12 @@ from nltk import WordNetLemmatizer
 from nltk.corpus.reader import wordnet
 import gzip
 
-input_file = 'model.pkl.gz'
-output_file = 'model.pkl'
+# input_file = 'model.pkl.gz'
+# output_file = 'model.pkl'
 
-with gzip.open(input_file, 'rb') as gz_file, open(output_file, 'wb') as output:
-    content = gz_file.read()
-    output.write(content)
+# with gzip.open(input_file, 'rb') as gz_file, open(output_file, 'wb') as output:
+#     content = gz_file.read()
+#     output.write(content)
 
 #Function to get Part of Speech of the text
 def get_wordnet_pos_tag(word):
@@ -40,7 +40,7 @@ def tokenize_lemma(text):  # User defined or custom tokenizer using lemma -- To 
 app = Flask(__name__)
 
 #Depickling the model
-clf = pickle.load(open('model.pkl', 'rb'))
+clf = pickle.load(open('model.pkl.gz', 'rb'))
 
 #Depickling the Count Vectorizer
 with open('vectorizer.pkl', 'rb') as file:
