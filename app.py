@@ -4,6 +4,14 @@ import nltk
 from flask import Flask, render_template, request
 from nltk import WordNetLemmatizer
 from nltk.corpus.reader import wordnet
+import gzip
+
+input_file = 'model.pkl.gz'
+output_file = 'model.pkl'
+
+with gzip.open(input_file, 'rb') as gz_file, open(output_file, 'wb') as output:
+    content = gz_file.read()
+    output.write(content)
 
 #Function to get Part of Speech of the text
 def get_wordnet_pos_tag(word):
